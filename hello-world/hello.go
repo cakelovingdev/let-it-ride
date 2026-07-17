@@ -4,8 +4,8 @@ import "fmt"
 import "rsc.io/sampler"
 
 
-func add(x string, y string){
-  fmt.Println(y,x)
+func add(x,y string)(string, string){
+  return y, x
 }
 
 func main() {
@@ -36,9 +36,9 @@ func main() {
 
   fmt.Print(name)
   fmt.Println(sampler.Hello())
-  
-  add("rintaro","tsumugi")
-
+ 
+  firstName, lastName := add("tsumugi","rintaro")
+  fmt.Println(firstName, lastName)
 
   // storing a result in a var
   e := c+d
