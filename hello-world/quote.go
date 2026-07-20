@@ -1,9 +1,11 @@
-package main
+package quote
 
-import "fmt"
+import (
+	"fmt"
 
-import "rsc.io/quote"
+	"rsc.io/quote"
+)
 
-func main(){
+func main() {
 	fmt.Println(quote.Glass())
 }
